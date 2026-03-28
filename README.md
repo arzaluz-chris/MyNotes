@@ -1,6 +1,6 @@
 # MyNotes
 
-Aplicacion iOS nativa de notas desarrollada con **UIKit** y **Swift**, construida completamente de forma programatica (sin Storyboards). Proyecto academico del Tecnologico de Monterrey enfocado en el dominio de interfaces graficas adaptables para iOS.
+Aplicación iOS nativa de notas desarrollada con **UIKit** y **Swift**, construida completamente de forma programática (sin Storyboards). Proyecto académico del Tecnológico de Monterrey enfocado en el dominio de interfaces gráficas adaptables para iOS.
 
 ## Demo en Video
 
@@ -9,24 +9,31 @@ Aplicacion iOS nativa de notas desarrollada con **UIKit** y **Swift**, construid
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/01-empty-state.png" width="200" alt="Estado vacio" />
+  <img src="screenshots/01-empty-state.png" width="200" alt="Estado vacío" />
   <img src="screenshots/02-new-note.png" width="200" alt="Nueva nota" />
   <img src="screenshots/03-note-filled.png" width="200" alt="Nota con contenido" />
 </p>
 <p align="center">
-  <img src="screenshots/04-validation-alert.png" width="200" alt="Alerta de validacion" />
+  <em>Estado vacío con mensaje orientativo — Formulario de nueva nota — Nota con contenido, slider de fuente y negritas</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/04-validation-alert.png" width="200" alt="Alerta de validación" />
   <img src="screenshots/05-edit-note.png" width="200" alt="Editar nota" />
   <img src="screenshots/06-notes-list.png" width="200" alt="Lista de notas" />
+</p>
+<p align="center">
+  <em>Validación de campos vacíos — Edición de nota existente — Lista de notas con fecha y navegación</em>
 </p>
 
 ## Funcionalidades
 
-- **Crear notas** con titulo y contenido
+- **Crear notas** con título y contenido
 - **Editar notas** existentes
-- **Eliminar notas** con confirmacion mediante alerta
-- **Validacion de entrada** — alertas al intentar guardar campos vacios
-- **Personalizar texto** — slider para tamano de fuente (12–32pt) y toggle para negritas
-- **Estado vacio** — mensaje orientativo cuando no hay notas
+- **Eliminar notas** con confirmación mediante alerta
+- **Validación de entrada** — alertas al intentar guardar campos vacíos
+- **Personalizar texto** — slider para tamaño de fuente (12–32pt) y toggle para negritas
+- **Estado vacío** — mensaje orientativo cuando no hay notas
 - **Interfaz adaptable** — compatible con iPhone y iPad mediante Auto Layout
 
 ## Arquitectura y Estructura
@@ -34,36 +41,36 @@ Aplicacion iOS nativa de notas desarrollada con **UIKit** y **Swift**, construid
 ```
 MyNotes/
 ├── AppDelegate.swift                # Ciclo de vida de la app
-├── SceneDelegate.swift              # Configuracion de la ventana y navegacion raiz
-├── Note.swift                       # Modelo de datos (struct con UUID, titulo, contenido, fecha)
-├── NoteStore.swift                  # Almacen en memoria (CRUD de notas)
-├── NotesListViewController.swift    # Pantalla principal — UITableView con estado vacio
+├── SceneDelegate.swift              # Configuración de la ventana y navegación raíz
+├── Note.swift                       # Modelo de datos (struct con UUID, título, contenido, fecha)
+├── NoteStore.swift                  # Almacén en memoria (CRUD de notas)
+├── NotesListViewController.swift    # Pantalla principal — UITableView con estado vacío
 ├── NoteDetailViewController.swift   # Editor de nota — formulario con scroll y teclado
 ├── NoteCell.swift                   # Celda personalizada con UIStackView
 └── Assets.xcassets/                 # Iconos de app (light, dark, tinted)
 ```
 
-## Stack Tecnico
+## Stack Técnico
 
-| Concepto | Implementacion |
+| Concepto | Implementación |
 |---|---|
-| **Framework** | UIKit (100% programatico, sin Storyboards) |
-| **Navegacion** | UINavigationController con push/pop |
+| **Framework** | UIKit (100% programático, sin Storyboards) |
+| **Navegación** | UINavigationController con push/pop |
 | **Layout** | Auto Layout con NSLayoutConstraint, Safe Area y Keyboard Layout Guide |
 | **Componentes UI** | UITableView, UITextField, UITextView, UISlider, UISwitch, UIButton, UIStackView, UILabel, UIAlertController |
-| **Patron de datos** | Store inyectado desde SceneDelegate (almacenamiento en memoria) |
+| **Patrón de datos** | Store inyectado desde SceneDelegate (almacenamiento en memoria) |
 | **Lenguaje** | Swift |
 | **IDE** | Xcode |
 
 ## Conceptos Clave Aplicados
 
-- **Auto Layout programatico** — constraints activados con `NSLayoutConstraint.activate()` y `translatesAutoresizingMaskIntoConstraints = false`
-- **Safe Area Layout Guide** — respeto de margenes seguros en todos los view controllers
-- **Keyboard Layout Guide** — el scroll se ajusta automaticamente al aparecer el teclado
-- **UIStackView** — composicion de formularios y celdas con spacing personalizado via `setCustomSpacing(after:)`
-- **UIAlertController** — confirmacion destructiva para eliminacion y validacion de campos vacios
-- **Swipe-to-delete** — gesto nativo de UITableView con accion destructiva
-- **Large Titles** — navegacion con titulos grandes estilo iOS nativo
+- **Auto Layout programático** — constraints activados con `NSLayoutConstraint.activate()` y `translatesAutoresizingMaskIntoConstraints = false`
+- **Safe Area Layout Guide** — respeto de márgenes seguros en todos los view controllers
+- **Keyboard Layout Guide** — el scroll se ajusta automáticamente al aparecer el teclado
+- **UIStackView** — composición de formularios y celdas con spacing personalizado vía `setCustomSpacing(after:)`
+- **UIAlertController** — confirmación destructiva para eliminación y validación de campos vacíos
+- **Swipe-to-delete** — gesto nativo de UITableView con acción destructiva
+- **Large Titles** — navegación con títulos grandes estilo iOS nativo
 
 ## Requisitos
 
@@ -71,7 +78,7 @@ MyNotes/
 - iOS 17+
 - No requiere dependencias externas
 
-## Como Ejecutar
+## Cómo Ejecutar
 
 1. Clona el repositorio:
    ```bash
